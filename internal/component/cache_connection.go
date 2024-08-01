@@ -1,6 +1,7 @@
 package component
 
 import (
+	"context"
 	"log"
 	"time"
 
@@ -9,9 +10,13 @@ import (
 )
 
 func GetCacheConnection() domain.CacheRepository {
-	cache, err := bigcache.NewBigCache(bigcache.DefaultConfig(10 * time.Minute))
+	ctx := context.Background()
+	config := bigcache.DefaultConfig(10 * time.Minute)
+
+	cache, err := bigcache.New(ctx, config)
 	if err != nil {
-		log.Fatalf("error When Connect Cache %s", err.Error())
+		log.Fatalf("Error when connecting to cache: %v", err)
 	}
+
 	return cache
 }

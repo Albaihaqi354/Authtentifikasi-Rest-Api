@@ -4,11 +4,18 @@ go 1.22.3
 
 require (
 	github.com/allegro/bigcache v1.2.1
+	github.com/gofiber/fiber v1.14.6
+	honnef.co/go/tools v0.4.7
+)
+
+require (
 	github.com/allegro/bigcache/v3 v3.1.0 // indirect
 	github.com/andybalholm/brotli v1.0.5 // indirect
 	github.com/doug-martin/goqu/v9 v9.19.0 // indirect
 	github.com/gofiber/fiber/v2 v2.52.5 // indirect
+	github.com/gofiber/utils v0.0.10 // indirect
 	github.com/google/uuid v1.5.0 // indirect
+	github.com/gorilla/schema v1.1.0 // indirect
 	github.com/klauspost/compress v1.17.0 // indirect
 	github.com/lib/pq v1.10.9 // indirect
 	github.com/lpernett/godotenv v0.0.0-20230527005122-0de1d4c5ef5e // indirect
