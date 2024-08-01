@@ -25,7 +25,7 @@ func (u *userRepository) FindById(ctx context.Context, id int64) (user domain.Us
 }
 
 func (u *userRepository) FindByUserName(ctx context.Context, userName string) (user domain.User, err error) {
-	dataset := u.db.From("users").Where(goqu.Ex{"username": userName})
+	dataset := u.db.From("users").Where(goqu.Ex{"user_name": userName})
 	_, err = dataset.ScanStructContext(ctx, &user)
 	return
 }
